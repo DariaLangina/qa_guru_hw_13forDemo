@@ -33,4 +33,62 @@ public class PageIntroTests extends TestBase {
           .shouldHave(text("Аналитическая платформа кибербезопасности"));
     });
   }
+
+  @AllureId("6297")
+  @DisplayName("Проверка компонентов информационного блока продукта R‑Vision TDP")
+  @Test
+  void checkInfoBlockComponentsForTdp() {
+    step("Открытие страницы продукта R‑Vision TDP", () ->
+        open("https://rvision.pro/deception/"));
+    step("Проверка компонентов информационного блока", () -> {
+      $(".beautiful-title-container")
+          .shouldBe(visible)
+          .shouldHave(text("R-Vision Threat Deception Platform"))
+          .shouldHave(text("Имитация ИТ-инфраструктуры для обнаружения кибератак"));
+    });
+  }
+
+
+  @AllureId("6298")
+  @DisplayName("Проверка компонентов информационного блока продукта R‑Vision IRP")
+  @Test
+  void checkInfoBlockComponentsForIrp() {
+    step("Открытие страницы продукта R‑Vision IRP", () ->
+        open("https://rvision.pro/irp/"));
+    step("Проверка компонентов информационного блока", () -> {
+      $(".beautiful-title-container")
+          .shouldBe(visible)
+          .shouldHave(text("R-Vision Incident Response Platform"))
+          .shouldHave(text("Платформа для создания Центра реагирования на инциденты ИБ"));
+    });
+  }
+
+  @AllureId("6299")
+  @DisplayName("Проверка компонентов информационного блока продукта R‑Vision TIP")
+  @Test
+  void checkInfoBlockComponentsForTip() {
+    step("Открытие страницы продукта R‑Vision TIP", () ->
+        open("https://rvision.pro/tip/"));
+    step("Проверка компонентов информационного блока", () -> {
+      $(".beautiful-title-container")
+          .shouldBe(visible)
+          .shouldHave(text("R-Vision Threat Intelligence Platform"))
+          .shouldHave(text("Комплексная работа с данными киберразведки"));
+    });
+  }
+
+  @AllureId("6300")
+  @DisplayName("Проверка компонентов информационного блока продукта R‑Vision SGRC")
+  @Test
+  void checkInfoBlockComponentsForSgrc() {
+    step("Открытие страницы продукта R‑Vision SGRC", () ->
+        open("https://rvision.pro/sgrc/"));
+    step("Проверка компонентов информационного блока", () -> {
+      $(".beautiful-title-container")
+          .shouldBe(visible)
+          .shouldHave(text("R-Vision Security GRC Platform"))
+          .shouldHave(text(
+              "Платформа для централизованного управления информационной безопасностью, моделирования рисков и автоматизации аудита ИБ"));
+    });
+  }
 }
