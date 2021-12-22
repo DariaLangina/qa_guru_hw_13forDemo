@@ -24,12 +24,6 @@ public class DriverSettings {
     chromeOptions.addArguments("--disable-popup-blocking");
     chromeOptions.addArguments("--disable-notifications");
 
-    if (Project.isWebMobile()) { // for chrome only
-      Map<String, Object> mobileDevice = new HashMap<>();
-      mobileDevice.put("deviceName", Project.config.browserMobileView());
-      chromeOptions.setExperimentalOption("mobileEmulation", mobileDevice);
-    }
-
     if (Project.isRemoteWebDriver()) {
       capabilities.setCapability("enableVNC", true);
       capabilities.setCapability("enableVideo", true);
