@@ -24,17 +24,10 @@ public class TestBase {
 
   @AfterEach
   public void addAttachments() {
-    String sessionId = DriverUtils.getSessionId();
-
     AllureAttachments.addScreenshotAs("Last screenshot");
     AllureAttachments.addPageSource();
     AllureAttachments.addBrowserConsoleLogs();
-//        AllureAttachments.attachNetwork(); // todo
+    AllureAttachments.addVideo();
     Selenide.closeWebDriver();
-
-    if (Project.isVideoOn()) {
-      AllureAttachments.addVideo(sessionId);
-    }
-
   }
 }

@@ -14,8 +14,4 @@ public class Project {
   public static boolean isRemoteWebDriver() {
     return !config.remoteDriverUrl().equals("");
   }
-
-  public static boolean isVideoOn() {
-    return !config.videoStorage().equals("");
-  }
 }
