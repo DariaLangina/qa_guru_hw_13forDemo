@@ -5,6 +5,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
+import static java.time.Duration.ofSeconds;
 
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
@@ -17,7 +18,7 @@ import org.junit.jupiter.api.Test;
 @Epic("Продукты")
 @Feature("Информация о продукте")
 @Story("Блок информации о продукте")
-@Tag("smoke")
+@Tag("regress")
 public class PageIntroTests extends TestBase {
 
   @AllureId("6247")
@@ -28,7 +29,7 @@ public class PageIntroTests extends TestBase {
         open("https://rvision.pro/sense/"));
     step("Проверка компонентов информационного блока", () -> {
       $(".beautiful-title-container")
-          .shouldBe(visible)
+          .shouldBe(visible, ofSeconds(6))
           .shouldHave(text("R-Vision SENSE"))
           .shouldHave(text("Аналитическая платформа кибербезопасности"));
     });
@@ -42,12 +43,11 @@ public class PageIntroTests extends TestBase {
         open("https://rvision.pro/deception/"));
     step("Проверка компонентов информационного блока", () -> {
       $(".beautiful-title-container")
-          .shouldBe(visible)
+          .shouldBe(visible, ofSeconds(6))
           .shouldHave(text("R-Vision Threat Deception Platform"))
           .shouldHave(text("Имитация ИТ-инфраструктуры для обнаружения кибератак"));
     });
   }
-
 
   @AllureId("6298")
   @DisplayName("Проверка компонентов информационного блока продукта R‑Vision IRP")
@@ -57,7 +57,7 @@ public class PageIntroTests extends TestBase {
         open("https://rvision.pro/irp/"));
     step("Проверка компонентов информационного блока", () -> {
       $(".beautiful-title-container")
-          .shouldBe(visible)
+          .shouldBe(visible, ofSeconds(6))
           .shouldHave(text("R-Vision Incident Response Platform"))
           .shouldHave(text("Платформа для создания Центра реагирования на инциденты ИБ"));
     });
@@ -71,7 +71,7 @@ public class PageIntroTests extends TestBase {
         open("https://rvision.pro/tip/"));
     step("Проверка компонентов информационного блока", () -> {
       $(".beautiful-title-container")
-          .shouldBe(visible)
+          .shouldBe(visible, ofSeconds(6))
           .shouldHave(text("R-Vision Threat Intelligence Platform"))
           .shouldHave(text("Комплексная работа с данными киберразведки"));
     });
@@ -85,7 +85,7 @@ public class PageIntroTests extends TestBase {
         open("https://rvision.pro/sgrc/"));
     step("Проверка компонентов информационного блока", () -> {
       $(".beautiful-title-container")
-          .shouldBe(visible)
+          .shouldBe(visible, ofSeconds(6))
           .shouldHave(text("R-Vision Security GRC Platform"))
           .shouldHave(text(
               "Платформа для централизованного управления информационной безопасностью, моделирования рисков и автоматизации аудита ИБ"));
