@@ -23,6 +23,7 @@ public class DriverSettings {
     chromeOptions.addArguments("--disable-infobars");
     chromeOptions.addArguments("--disable-popup-blocking");
     chromeOptions.addArguments("--disable-notifications");
+    chromeOptions.addArguments("--lang=ru-ru");
 
     if (Project.isRemoteWebDriver()) {
       capabilities.setCapability("enableVNC", true);
