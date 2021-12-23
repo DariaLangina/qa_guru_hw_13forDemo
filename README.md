@@ -2,7 +2,8 @@
 
 ## :rocket: Технологический стек
 
-IntelliJ IDEA, Java, Gradle, JUnit5, Selenide, Selenoid, Jenkins, Allure Report, Allure TestOps, Jira, Github, Telegram
+IntelliJ IDEA, Java, Gradle, JUnit5, Selenide, Selenoid, Jenkins, Allure Report, Allure TestOps,
+Jira, Github, Telegram
 
 <p  align="center"
 
@@ -20,8 +21,8 @@ IntelliJ IDEA, Java, Gradle, JUnit5, Selenide, Selenoid, Jenkins, Allure Report,
 <code><img width="5%" title="Telegram" src="images/logo/Telegram.svg"></code>
 </p>
 
-
 ## UI тесты
+
 * ✅ Проверка компонентов информационного блока продукта R‑Vision IRP
 * ✅ Проверка компонентов информационного блока продукта R‑Vision SENSE
 * ✅ Проверка компонентов информационного блока продукта R‑Vision SGRC
@@ -29,9 +30,12 @@ IntelliJ IDEA, Java, Gradle, JUnit5, Selenide, Selenoid, Jenkins, Allure Report,
 * ✅ Проверка компонентов информационного блока продукта R‑Vision TIP
 
 ### Как запустить
+
 Перед выполением необходимо:
+
 * в local.properies определить параметры конфигурации (для запуска тестов локально)
-* в remote.properies определить параметры конфигурации (для запуска тестов удаленно) или передать значения:
+* в remote.properies определить параметры конфигурации (для запуска тестов удаленно) или передать
+  значения:
 
 * browser (default chrome)
 * browserVersion (default 89.0)
@@ -39,28 +43,32 @@ IntelliJ IDEA, Java, Gradle, JUnit5, Selenide, Selenoid, Jenkins, Allure Report,
 * remoteDriverUrl (url address from selenoid or grid)
 * threads (number of threads)
 
-
 ### Локально
+
 ```
 gradle clean test
 ```
 
 ### Удаленно
+
 ```
 gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -Dthreads=1 test
 ```
 
 Serve report:
+
 ```bash
 allure serve build/allure-results
 ```
 
 ### Отчёт о прохождении автотестов в Allure Report
+
 <p align="center">
   <img src="images/readme13forDemo/Allure_Report.png">
 </p>
 
 ### Хранение тестовой документации в Allure TestOps
+
 <p align="center">
   <img src="images/readme13forDemo/Allure_TestOps1.png">
 </p>
@@ -70,11 +78,19 @@ allure serve build/allure-results
 </p>
 
 ### Интерграция с Jira
+
 <p align="center">
   <img src="images/readme13forDemo/Jira.png">
 </p>
 
+### Пример запуска теста в Selenoid
+
+<p  align="left"
+<code><img width="60%" title="Selenoid" src="images/demo1.gif"></code>
+</p>
+
 ### Уведомления о прохождении автотестов в Telegram
+
 <p align="center">
   <img src="images/readme13forDemo/Telegram_1.png">
 </p>
