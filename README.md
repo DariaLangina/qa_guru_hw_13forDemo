@@ -61,6 +61,18 @@ Serve report:
 allure serve build/allure-results
 ```
 
+### Запуск в Jenkins
+
+Статистика по запускам <br >
+<p align="center">
+  <img src="images/readme13forDemo/jenkins1.png">
+</p>
+
+Параметры запуска <br >
+<p align="center">
+  <img src="images/readme13forDemo/jenkins2.png">
+</p>
+
 ### Отчёт о прохождении автотестов в Allure Report
 
 <p align="center">
