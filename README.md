@@ -29,32 +29,6 @@ Jira, Github, Telegram
 * ✅ Проверка компонентов информационного блока продукта R‑Vision TDP
 * ✅ Проверка компонентов информационного блока продукта R‑Vision TIP
 
-### Как запустить
-
-Перед выполением необходимо:
-
-* в local.properies определить параметры конфигурации (для запуска тестов локально)
-* в remote.properies определить параметры конфигурации (для запуска тестов удаленно) или передать
-  значения:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* remoteDriverUrl (url address from selenoid or grid)
-* threads (number of threads)
-
-### Локально
-
-```
-gradle clean test
-```
-
-### Удаленно
-
-```
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -Dthreads=1 test
-```
-
 Serve report:
 
 ```bash
@@ -110,6 +84,32 @@ allure serve build/allure-results
 <p align="center">
   <img src="images/readme13forDemo/Telegram_2.png">
 </p>
+
+### Как запустить
+
+Перед выполением необходимо:
+
+* в local.properies определить параметры конфигурации (для запуска тестов локально)
+* в remote.properies определить параметры конфигурации (для запуска тестов удаленно) или передать
+  значения:
+
+* browser (default chrome)
+* browserVersion (default 89.0)
+* browserSize (default 1920x1080)
+* remoteDriverUrl (url address from selenoid or grid)
+* threads (number of threads)
+
+### Локально
+
+```
+gradle clean test
+```
+
+### Удаленно
+
+```
+gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -Dthreads=1 test
+```
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
