@@ -29,24 +29,6 @@ Jira, Github, Telegram
 * ✅ Проверка компонентов информационного блока продукта R‑Vision TDP
 * ✅ Проверка компонентов информационного блока продукта R‑Vision TIP
 
-Serve report:
-
-```bash
-allure serve build/allure-results
-```
-
-### Запуск в Jenkins
-
-Статистика по запускам <br >
-<p align="center">
-  <img src="images/readme13forDemo/jenkins1.png">
-</p>
-
-Параметры запуска <br >
-<p align="center">
-  <img src="images/readme13forDemo/jenkins2.png">
-</p>
-
 ### Отчёт о прохождении автотестов в Allure Report
 
 <p align="center">
@@ -83,6 +65,24 @@ allure serve build/allure-results
 
 <p align="center">
   <img src="images/readme13forDemo/Telegram_2.png">
+</p>
+
+Serve report:
+
+```bash
+allure serve build/allure-results
+```
+
+### Запуск в Jenkins
+
+Статистика по запускам <br >
+<p align="center">
+  <img src="images/readme13forDemo/jenkins1.png">
+</p>
+
+Параметры запуска <br >
+<p align="center">
+  <img src="images/readme13forDemo/jenkins2.png">
 </p>
 
 ### Как запустить
